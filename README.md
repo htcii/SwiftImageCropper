@@ -13,7 +13,7 @@ iPhone「写真」アプリ風に、画像を **クロップ・回転・傾き�
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/htcii/ImageCropper.git", from: "1.0.0"),
+    .package(url: "https://github.com/htcii/SwiftImageCropper.git", from: "1.0.0"),
 ]
 ```
 
