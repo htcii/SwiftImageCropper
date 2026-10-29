@@ -6,14 +6,28 @@ iPhone「写真」アプリ風に、画像を **クロップ・回転・傾き�
 
 ## 動作環境
 
-- iOS 17 以上 / Swift 6 / SwiftUI
+- iOS 17 以上 / Swift 6.2 以上（Xcode 26 以上）/ SwiftUI
 - Done・Cancel ボタンは iOS 26+ で Liquid Glass、それ未満は Material で表示
 
 ## インストール（SPM）
 
+### Xcode から追加する
+
+File → Add Package Dependencies… で `https://github.com/htcii/SwiftImageCropper.git` を入力し、`ImageCropper` ライブラリを追加します。
+
+### Package.swift に書く
+
 ```swift
 dependencies: [
     .package(url: "https://github.com/htcii/SwiftImageCropper.git", from: "1.0.0"),
+],
+targets: [
+    .target(
+        name: "YourTarget",
+        dependencies: [
+            .product(name: "ImageCropper", package: "SwiftImageCropper"),
+        ]
+    ),
 ]
 ```
 
